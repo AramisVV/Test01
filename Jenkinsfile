@@ -5,7 +5,6 @@ pipeline {
         stage('Preparar entorno') {
             steps {
                 echo "Creando entorno virtual..."
-                bat 'python -m venv venv'
                 bat '"C:\\Users\\Shylocker\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m venv venv'
                 bat 'venv\\Scripts\\activate && pip install -r requirements.txt'
             }
@@ -14,7 +13,7 @@ pipeline {
         stage('Ejecutar script') {
             steps {
                 echo "Ejecutando script principal..."
-                bat 'venv\\Scripts\\activate && python src\\HelloWorld.py'
+                bat 'venv\\Scripts\\activate && python E:\HelloWorld.py'
             }
         }
 
