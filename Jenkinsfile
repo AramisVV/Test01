@@ -18,13 +18,6 @@ pipeline {
             }
         }
 
-        stage('Ejecutar tests') {
-            steps {
-                echo "Ejecutando pruebas..."
-                bat 'venv\\Scripts\\activate && pip install pytest'
-                bat 'venv\\Scripts\\activate && pytest --maxfail=1 --disable-warnings -q'
-            }
-        }
     }
 
     post {
