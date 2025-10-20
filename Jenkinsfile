@@ -14,7 +14,7 @@ pipeline {
         stage('Ejecutar script') {
             steps {
                 echo "Ejecutando script principal..."
-                bat 'venv\\Scripts\\activate && python src\\Factura v.2.py'
+                bat 'venv\\Scripts\\activate && python src\\Factura_v.2.py'
             }
         }
 
