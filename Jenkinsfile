@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo "Ejecutando pruebas..."
                 bat 'venv\\Scripts\\activate && pip install pytest'
-                bat 'venv\\Scripts\\activate && pytest prueba\\ --maxfail=1 --disable-warnings -q'
+                bat 'venv\\Scripts\\activate && pytest Prueba\\ --maxfail=1 --disable-warnings -q'
             }
         }
     }
